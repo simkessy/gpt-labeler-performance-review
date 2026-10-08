@@ -1,9 +1,13 @@
 # GPT Labeler Performance Review
 
-An interactive September 2026 performance report.
-
-Open `index.html` in a browser. No build step or external dependencies are required.
-
-Includes interactive job workflows, memory comparisons and workload filters, current/proposed flow views, a savings calculator, light/dark themes, keyboard navigation, and print-to-PDF. Referenced evidence files were not included and are marked accordingly.
+A concise September 2026 performance briefing.
 
 Live site: https://simkessy.github.io/gpt-labeler-performance-review/
+
+Open `index.html` in any browser. No build step or external dependencies are required.
+
+The overview summarizes the key findings and recommended priorities. Five tabs organize Overview, Timing & flow, Resources, Plan & savings, and Evidence. Detailed workflows, approval evidence, publication handoffs, and submission counts are expandable.
+
+Interactive workflows, resource filters, the savings calculator, themes, keyboard navigation, historical section links, and print-to-PDF are included. Engineering delivery estimates have been removed. Observed timings are retained, and proposed savings are marked as assumptions.
+
+Referenced source documents were not supplied.
