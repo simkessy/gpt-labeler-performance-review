@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GPT Labeler | Performance Review</title>
+<meta name="description" content="Explore GPT Labeler job timings, proposed improvements, and an interactive savings calculator.">
+<meta name="theme-color" content="#f6f7f9">
+<style>
+:root{--ink:#182b3a;--muted:#516271;--paper:#f6f7f9;--line:#dce3e9;--blue:#255ad5;--purple:#7351bb;--green:#157a66;--amber:#a15c0a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1120px;margin:auto;padding:40px 28px 64px}h1{font-size:clamp(32px,5vw,52px);line-height:1.12;letter-spacing:-1.8px;margin:12px 0 18px}h2{font-size:26px;letter-spacing:-.5px;margin:0 0 12px}h3{font-size:18px;margin:0 0 8px}p{margin:0 0 12px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}.intro{max-width:750px;font-size:20px;color:var(--muted)}.meta{font-size:13px;color:var(--muted)}.hero{padding-bottom:24px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}.metric,.panel,.card{background:white;border:1px solid var(--line);border-radius:16px}.metric{padding:20px}.metric strong{display:block;font-size:32px;letter-spacing:-1px}.metric span{font-size:14px;color:var(--muted)}.tabs{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}.tabs button,button.preset{border:1px solid var(--line);background:white;color:var(--ink);border-radius:9px;padding:10px 16px;font:inherit;cursor:pointer}.tabs button[aria-selected=true]{background:var(--ink);color:white;border-color:var(--ink)}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e4a62a;outline-offset:4px}.panel{padding:28px;margin-bottom:20px}.sub{color:var(--muted);max-width:800px}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:24px 0}.step{position:relative;border-radius:12px;padding:22px;background:#eef3ff;border-top:5px solid var(--blue)}.step:nth-child(2){background:#f2eef9;border-color:var(--purple)}.step:nth-child(3){background:#edf7f4;border-color:var(--green)}.step:not(:last-child):after{content:'→';position:absolute;right:-18px;top:40%;font-size:23px;color:var(--muted)}.num{font-size:12px;font-weight:700;color:var(--muted);display:block;margin-bottom:10px}.duration{font-size:30px;font-weight:750;letter-spacing:-1px;margin:12px 0}.step p{font-size:14px}.strip{display:flex;width:100%;height:34px;border-radius:8px;overflow:hidden;margin:18px 0 12px}.strip>div{min-width:0}.prep{background:var(--blue)}.provider{background:var(--purple)}.publish{background:var(--green)}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}.note{font-size:14px;color:var(--muted);margin:18px 0 0}.callout{border-left:4px solid var(--amber);background:#fff7e9;padding:16px 18px;border-radius:0 8px 8px 0;margin:20px 0}.callout p:last-child{margin:0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}.card{padding:22px}.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 8px;background:#edf2ff;color:var(--blue);border-radius:5px;margin-bottom:12px}.card p{color:var(--muted);font-size:15px}.benefit{font-size:14px;font-weight:650;color:var(--ink)!important}.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}.barrow{display:grid;grid-template-columns:1fr auto;gap:8px;margin:20px 0}.bartrack{grid-column:1/-1;height:22px;background:#edf0f3;border-radius:5px;overflow:hidden}.barfill{height:100%;background:var(--green)}.controls label{display:block;font-weight:650;margin:22px 0 8px}.controls output{float:right;color:var(--blue)}input[type=range]{width:100%;accent-color:var(--blue);cursor:pointer}.bounds{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.result{background:#eff4ff;border-radius:12px;padding:24px}.result strong{display:block;font-size:42px;letter-spacing:-1px}.result .label{font-size:14px;color:var(--muted)}.result p{margin-top:12px}.presets{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.presets button{font-size:14px}.compare-label{display:flex;justify-content:space-between;margin-top:18px;font-size:14px}.compare-bar{height:24px;background:#edf0f3;border-radius:5px;margin-top:6px;overflow:hidden}.compare-bar>div{height:100%;background:var(--ink);transition:width .2s}.compare-bar.future>div{background:var(--blue)}details{border-top:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:650}details p,details li{font-size:14px;color:var(--muted)}details p{margin-top:12px}details ul{padding-left:20px}table{border-collapse:collapse;width:100%;font-size:14px;margin-top:16px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{color:var(--muted)}.tablewrap{overflow:auto}a{color:var(--blue);text-underline-offset:3px}.footer{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px}.print{font-size:13px;background:none;border:none;text-decoration:underline;color:var(--blue);cursor:pointer}.hidden,[hidden]{display:none!important}@media(max-width:720px){main{padding:24px 18px}.metrics{grid-template-columns:1fr}.metric{padding:14px 18px}.metric strong{font-size:28px}.flow,.cards,.split{grid-template-columns:1fr}.step:not(:last-child):after{content:'↓';right:50%;top:auto;bottom:-27px}.flow{gap:28px}.panel{padding:20px}.legend{gap:10px}.result strong{font-size:34px}}@media print{body{background:white}main{max-width:none;padding:0}.tabs,.presets,.controls,.print{display:none}.view[hidden]{display:block!important}.panel,.card,.step{break-inside:avoid}.panel{border:none;padding:16px 0}details{display:block}details>*{display:block!important}.footer{margin-top:12px}h1{font-size:32px}}
+
+/* Report layout: self-contained, with no external fonts or dependencies. */
+:root{--ink:#1d2835;--muted:#526172;--paper:#f6f7f9;--line:#dde3e9;--blue:#315dba;--purple:#6d7790;--green:#4c7b79;--amber:#8d651b}
+body{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.skip-link{position:absolute;top:-80px;left:20px;z-index:10;background:var(--ink);color:white;padding:12px 20px}.skip-link:focus{top:12px}
+.topbar{max-width:1280px;margin:auto;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}
+.brand{display:flex;gap:12px;align-items:center;color:var(--ink);font-size:14px;font-weight:650;text-decoration:none}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;background:var(--ink);color:white;border-radius:6px;font-size:18px;font-weight:700}
+.brand-divider{color:#b4bec8;margin:0 5px;font-weight:400}.brand-sub{color:var(--muted);font-weight:450}
+.share-button{border:1px solid var(--line);border-radius:6px;padding:8px 14px;background:white;color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+main{max-width:1160px;padding:54px 40px 38px}
+.hero{padding-bottom:8px}h1{font-size:clamp(36px,5.2vw,62px);line-height:1.08;letter-spacing:-2.4px;max-width:850px;margin:18px 0 22px;font-weight:720}
+.eyebrow{font-size:11px;letter-spacing:1.5px;color:var(--muted)}.intro{font-size:18px;line-height:1.65;max-width:760px}
+.metrics{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:30px 0 18px}
+.metric{background:transparent;border:0;border-radius:0;padding:24px 28px}.metric:first-child{padding-left:0}.metric+.metric{border-left:1px solid var(--line)}
+.metric strong{font-size:34px;line-height:1.2;margin-bottom:8px;font-weight:650}.metric span{font-size:13px}
+.tabs{gap:24px;margin:30px 0 26px;border-bottom:1px solid var(--line)}
+.tabs button{background:transparent;border:0;border-bottom:2px solid transparent;border-radius:0;padding:12px 0 16px;color:var(--muted);font-size:14px;font-weight:600}
+.tabs button[aria-selected=true]{background:transparent;color:var(--blue);border-color:var(--blue)}
+.panel{border-radius:10px;padding:32px;margin-bottom:22px}.panel h2{font-size:25px;font-weight:650}.sub{font-size:15px;line-height:1.65}
+.flow{gap:16px;margin:30px 0 26px}.step{border-radius:7px;padding:22px 20px;border-top-width:3px}.step:nth-child(1){background:#eff3fc}.step:nth-child(2){background:#f0f2f6}.step:nth-child(3){background:#eef4f4}.step:not(:last-child):after{display:none}
+.num{font-size:10px;letter-spacing:.6px;margin-bottom:16px}.step h3{font-size:17px;font-weight:650;letter-spacing:-.25px;min-height:26px}.duration{font-size:29px;margin:16px 0 12px;font-weight:650}.step p{margin:0;line-height:1.65;color:var(--muted)}
+.strip{height:12px;border-radius:3px;margin-bottom:14px}.legend{font-size:12px;gap:22px}.dot{width:8px;height:8px}.note{font-size:13px;line-height:1.65}
+.callout{background:#faf7ef;border-radius:0 6px 6px 0;border-left-width:3px;padding:17px 20px;font-size:14px;margin:24px 0}.callout p{color:var(--muted);margin-top:6px;line-height:1.6}
+details{padding:18px 0}summary{font-size:14px;font-weight:600}details p,details li{line-height:1.7}
+.cards{gap:18px;margin:28px 0}.card{border-radius:7px;padding:24px}.tag{font-size:10px;letter-spacing:.5px;border-radius:3px;padding:5px 8px;background:#eff3fc}.card h3{font-size:18px;margin:5px 0 12px}.card p{font-size:14px;line-height:1.7}.card p:last-child{margin-bottom:0}
+.controls label{font-size:14px}.controls output{font-variant-numeric:tabular-nums}.result{border-radius:7px;background:#eff3fc;padding:28px}.result strong{font-size:46px;font-weight:650;margin-top:8px}.result .label{font-size:12px}.result p{line-height:1.7}
+button.preset{border-radius:5px;padding:8px 12px;font-size:12px}.presets{gap:6px}.presets .active{color:var(--blue);border-color:var(--blue);background:#eff3fc}
+.compare-bar{height:14px;border-radius:3px}.compare-label{font-size:12px}.bartrack{height:14px;border-radius:3px}.barrow{font-size:13px}
+.source-unavailable{color:var(--muted)}.source-unavailable small{font-size:12px}.footer{font-size:12px;margin-top:28px;padding:0 2px}.print{font-size:12px}
+button{transition:background .15s,color .15s,border-color .15s}button:hover{filter:brightness(.96)}
+@media(max-width:800px){.topbar{padding:18px 24px}main{padding:36px 24px}.flow{grid-template-columns:1fr}.duration{font-size:27px}.step h3{min-height:0}.split{grid-template-columns:1fr}.metric strong{font-size:27px}.metric{padding:20px}.tabs{gap:20px}}
+@media(max-width:580px){.topbar{padding:16px 18px}.brand-sub,.brand-divider{display:none}main{padding:30px 18px}h1{letter-spacing:-1.6px;font-size:40px}.intro{font-size:16px}.metrics{grid-template-columns:1fr}.metric{padding:16px 0!important}.metric+.metric{border-left:0;border-top:1px solid var(--line)}.metric strong{font-size:28px}.tabs{gap:14px;flex-wrap:nowrap;overflow-x:auto}.tabs button{white-space:nowrap;font-size:12px;padding-bottom:12px}.panel{padding:22px 18px}.panel h2{font-size:23px}.cards{grid-template-columns:1fr}.legend{gap:10px}.controls output{float:none;display:block;margin-top:5px}.result strong{font-size:38px}.footer{gap:12px}.source-unavailable small{display:block}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+@media print{.topbar,.skip-link{display:none}main{padding:0;max-width:none}.metrics{display:grid;grid-template-columns:repeat(3,1fr)}.metric{padding:14px!important}.view[hidden]{display:block!important}.panel{border:0;padding:16px 0}.card,.step,.result{break-inside:avoid}.flow{grid-template-columns:repeat(3,1fr)}.cards,.split{grid-template-columns:repeat(2,1fr)}h1{font-size:32px}.source-unavailable small{display:inline}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#report">Skip to report</a>
+<nav class="topbar" aria-label="Site navigation"><a class="brand" href="#flow"><span class="brand-mark" aria-hidden="true">G</span> GPT Labeler <span class="brand-divider">/</span> <span class="brand-sub">Performance review</span></a><button class="share-button" id="share-site">Copy link</button></nav>
+<main id="report">
+<header class="hero">
+<div class="eyebrow">GPT Labeler · September 2026 review</div>
+<h1>Start jobs sooner.<br>Deliver labels sooner.</h1>
+<p class="intro">Remove the sample and approval wait for selected jobs. Publish saved labels before file cleanup. Use fewer resources for small jobs.</p>
+<div class="metrics">
+<div class="metric"><strong>12 h 37 min</strong><span>Average job time · complete-timing group</span></div>
+<div class="metric"><strong>99.77%</strong><span>Resolved reviews approved · 2026 year to date</span></div>
+<div class="metric"><strong>3½–5¾ hours</strong><span>Possible time saved · planning assumptions</span></div>
+</div>
+<p class="meta">Measured results and planning assumptions are separate. No change has been tested in production.</p>
+</header>
+<div class="tabs" role="tablist" aria-label="Report views">
+<button role="tab" id="tab-flow" aria-controls="flow-view" aria-selected="true" tabindex="0">1. Where time goes</button>
+<button role="tab" id="tab-actions" aria-controls="actions-view" aria-selected="false" tabindex="-1">2. What to change</button>
+<button role="tab" id="tab-savings" aria-controls="savings-view" aria-selected="false" tabindex="-1">3. Possible savings</button>
+</div>
+<section class="view" id="flow-view" role="tabpanel" aria-labelledby="tab-flow">
+<div class="panel">
+<h2>One job. Three main stages.</h2>
+<p class="sub">The user supplies records and instructions. The service sends the records to an AI provider, then delivers the labels in an output table.</p>
+<div class="flow" aria-label="Job flow with average stage times">
+<article class="step"><span class="num">01 · BEFORE LABELING</span><h3>Prepare and approve</h3><div class="duration">7 h 15 min</div><p>Prepare records. Label a sample to estimate cost. Pass approval. Send the full job.</p></article>
+<article class="step"><span class="num">02 · LABELING</span><h3>Run and detect completion</h3><div class="duration">3 h 34 min</div><p>The provider queues and labels records. Our service checks for completion.</p></article>
+<article class="step"><span class="num">03 · AFTER LABELING</span><h3>Save and publish</h3><div class="duration">1 h 47 min</div><p>Save labels. Clean up temporary files. Publish the output table.</p></article>
+</div>
+<div class="strip" role="img" aria-label="Job time: 58 percent before labeling, 28 percent labeling and detection, 14 percent saving and publication"><div class="prep" style="width:57.5%"></div><div class="provider" style="width:28.3%"></div><div class="publish" style="width:14.2%"></div></div>
+<div class="legend"><span><i class="dot prep"></i>Before labeling · 58%</span><span><i class="dot provider"></i>Labeling and detection · 28%</span><span><i class="dot publish"></i>Save and publish · 14%</span></div>
+<p class="note">Measured: 1,676 completed jobs with all required times. Rounding can change the displayed total by one minute.</p>
+<p class="note"><strong>The 3 h 34 min is not pure model processing time.</strong> It includes provider queues, processing, and our completion checks. We cannot yet separate these times.</p>
+<details><summary>Do some models take longer?</summary><p>Earlier job comparisons show different submission-to-detected-completion times by model. But job sizes and settings differ. These results do not prove that one model processes records faster.</p><p>Next step: record when the provider starts and finishes, and when our service detects completion. Use those times to find the delay before choosing a faster model.</p><p><span class="source-unavailable">Provider timing evidence <small>(source file not provided)</small></span></p></details>
+<div class="callout"><strong>The largest delay comes before labeling.</strong><p>It includes several steps. We cannot count all 7¼ hours as approval time.</p></div>
+<details><summary>What happens after labeling?</summary><div class="barrow"><span>Save returned labels</span><strong>34 min</strong><div class="bartrack"><div class="barfill" style="width:31.6%"></div></div></div><div class="barrow"><span>Reach the file-cleanup marker</span><strong>27 min</strong><div class="bartrack"><div class="barfill" style="width:24.9%"></div></div></div><div class="barrow"><span>Schedule and publish the final output</span><strong>47 min</strong><div class="bartrack"><div class="barfill" style="width:43.5%"></div></div></div><p>About 73 minutes pass after labels are saved. These times include waiting. They are not times spent on continuous processing.</p></details>
+<details><summary>Do jobs wait for machines?</summary><p>Yes. Within the period after provider completion, recorded resource waits average 3.7 minutes. The slowest 5% wait at least 17.6 minutes. This result covers 1,620 jobs.</p><p>These waits are already inside the stage times. Do not add them again. The study does not measure every startup delay or all waits before labeling.</p></details>
+</div>
+</section>
+<section class="view" id="actions-view" role="tabpanel" aria-labelledby="tab-actions" hidden>
+<div class="panel"><h2>Make two changes first.</h2><p class="sub">Start with selected jobs. Compare the results before a wider release.</p>
+<div class="cards">
+<article class="card"><span class="tag">PRIORITY 1 · TIME</span><h3>Skip the sample and approval</h3><p>Use a controlled switch for new jobs. Keep access checks and actual cost records.</p><p class="benefit">Planning assumption: save 3–5 hours per eligible job.</p><p>Estimated work: 3–5 engineering days. More time may be needed for data changes.</p></article>
+<article class="card"><span class="tag">PRIORITY 2 · TIME</span><h3>Publish before file cleanup</h3><p>Check that all labels are saved. Start publication at once. Clean up files separately.</p><p class="benefit">Planning assumption: save 30–45 minutes per affected job.</p><p>Estimated work: 1–2 weeks. Prevent missing labels and duplicate publication.</p></article>
+<article class="card"><span class="tag">SUPPORTING CHANGE · RESOURCES</span><h3>Do not start empty work</h3><p>Check for returned labels before starting a data-processing job. In the available sample, 124 of 209 post-processing runs did no processing work.</p><p class="benefit">Resource benefit. Time savings are not measured.</p><p>Estimated work: 2–4 engineering days.</p></article>
+<article class="card"><span class="tag">SUPPORTING CHANGE · RESOURCES</span><h3>Use smaller worker profiles</h3><p>Test less memory and fewer workers for small jobs. Keep a separate profile for large jobs.</p><p class="benefit">Resource benefit. Time savings are not measured.</p><p>Estimated work: 2–5 engineering days, plus observation.</p></article>
+</div>
+<details><summary>Why skip sampling and approval?</summary><p>In the 2026 review data, 26,889 of 26,950 resolved reviews passed. Most approvals were automatic. Jobs with a numeric estimate took 6.6 hours on average from submission to automatic approval.</p><p>The approval decision was quick. The wait came before the review was created. The 6.6 hours includes other preparation. It is not all removable sample time.</p></details>
+<details><summary>What did the resource study find?</summary><p>Among available histories, 21% of worker instances received no processing tasks. This is a worker count. It is not a percentage of money or processing hours wasted.</p><div class="tablewrap"><table><caption>Highest worker memory reading per run · GiB</caption><thead><tr><th scope="col">Step</th><th scope="col">Average</th><th scope="col">95% at or below</th><th scope="col">Runs with readings</th></tr></thead><tbody><tr><th scope="row">Input preparation</th><td>1.44</td><td>4.27</td><td>82</td></tr><tr><th scope="row">Save returned labels</th><td>6.12</td><td>14.31</td><td>47</td></tr><tr><th scope="row">Publish output</th><td>5.03</td><td>6.16</td><td>105</td></tr></tbody></table></div><p>Saving and publication request 88 GiB per worker. The readings do not include all types of memory. Larger readings exist in other data. Do not reduce every job to one small memory limit.</p></details>
+</div>
+</section>
+<section class="view" id="savings-view" role="tabpanel" aria-labelledby="tab-savings" hidden>
+<div class="panel"><h2>Test the savings assumptions.</h2><p class="sub">Move the sliders. This calculator shows possible results for a job that gets both changes. It does not predict the average for all users.</p>
+<div class="split" style="margin-top:24px">
+<div class="controls"><label for="sample-saving">Sample and approval time removed <output id="sample-value" for="sample-saving">3 hours</output></label><input type="range" id="sample-saving" min="0" max="300" step="15" value="180"><div class="bounds"><span>No saving</span><span>5 hours</span></div>
+<label for="publish-saving">Publication time removed <output id="publish-value" for="publish-saving">30 minutes</output></label><input type="range" id="publish-saving" min="0" max="45" step="5" value="30"><div class="bounds"><span>No saving</span><span>45 minutes</span></div>
+<div class="presets"><button class="preset" data-sample="180" data-publish="30">Lower planning case</button><button class="preset" data-sample="300" data-publish="45">Upper planning case</button><button class="preset" data-sample="0" data-publish="0">No changes</button></div>
+<p class="note">Assumes both changes apply to the same job. Assumes they do not create new waits. Resource changes add no time savings here.</p>
+</div>
+<div><div class="result" aria-live="polite" aria-atomic="true"><span class="label">Possible job time</span><strong id="future-time">9 h 7 min</strong><p><b id="saved-time">3 h 30 min saved</b><br><span id="saved-percent">28% less time</span></p><span class="label">Planning scenario · not a measured result</span></div>
+<div class="compare-label"><span>Measured baseline</span><b>12 h 37 min</b></div><div class="compare-bar"><div style="width:100%"></div></div>
+<div class="compare-label"><span>Selected scenario</span><b id="compare-time">9 h 7 min</b></div><div class="compare-bar future"><div id="future-bar" style="width:72.3%"></div></div></div>
+</div>
+<div class="callout"><strong>A 75% reduction needs another change.</strong><p>The target is about 3 h 9 min per job. Labeling and completion detection alone take 3 h 34 min. We must reduce that stage too.</p></div>
+<details><summary>Where do these assumptions come from?</summary><p>The 3–5 hour range uses the observed multi-hour cost-estimation and pre-approval waits as context. It is a planning assumption, not a measured removable duration.</p><p>The 30–45 minute range targets part of the 73-minute wait after labels are saved. It keeps time for checks and final writing. No pilot has verified either range.</p><p>The baseline uses 756.8 minutes, the sum of the rounded stage measurements. Displayed totals are rounded to whole minutes.</p></details>
+<details><summary>What must the pilot prove?</summary><p>Compare similar jobs. Measure time to usable output, failures, missing or duplicate labels, and actual cost. Keep failed and unfinished jobs in the results.</p><p>For the labeling stage, first separate provider completion time from the time our service notices it. Then test submission and completion checks. Keep label quality the same.</p></details>
+</div>
+</section>
+<div class="panel" style="padding-top:12px;padding-bottom:12px"><details><summary>Study scope and evidence</summary><p>The September census covers 3,727 user jobs. The timing chart uses 1,676 completed jobs with all required times. Completed jobs alone do not describe failure rates.</p><p>We selected 1,774 data-processing runs for detailed inspection. We retrieved 580 histories. Of these, 234 had positive worker-memory readings. No histories were available for September 1–7. These resource results describe the available sample, not every September job.</p><p>The approval rate uses resolved reviews from January through early October 2026. It includes automatic approvals. It is not a human-only approval rate.</p><p>Evidence was collected October 6–8. Outcomes were observed through October 7. Engineering work estimates exclude review and release lead time.</p><ul><li><span class="source-unavailable">Full report and evidence links <small>(source file not provided)</small></span></li><li><span class="source-unavailable">September study <small>(source file not provided)</small></span></li><li><span class="source-unavailable">Approval study <small>(source file not provided)</small></span></li></ul></details></div>
+<footer class="footer"><span>GPT Labeler · September 2026 review</span><button class="print" id="print-report">Print or save as PDF</button></footer>
+</main>
+<script>
+'use strict';
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function selectTab(tab){tabs.forEach(t=>{const active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!active;});}
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;else if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectTab(tabs[next]);tabs[next].focus();});});
+const baseline=756.8,sample=document.getElementById('sample-saving'),publish=document.getElementById('publish-saving');
+function time(minutes){const n=Math.round(minutes),h=Math.floor(n/60),m=n%60;return h?(h+' h'+(m?' '+m+' min':'')):m+' min';}
+function update(){const a=Number(sample.value),b=Number(publish.value),saving=a+b,remaining=baseline-saving;document.getElementById('sample-value').textContent=time(a);document.getElementById('publish-value').textContent=time(b);document.getElementById('future-time').textContent=time(remaining);document.getElementById('compare-time').textContent=time(remaining);document.getElementById('saved-time').textContent=time(saving)+' saved';document.getElementById('saved-percent').textContent=Math.round(saving/baseline*100)+'% less time';document.getElementById('future-bar').style.width=(remaining/baseline*100)+'%';}
+[sample,publish].forEach(s=>s.addEventListener('input',update));document.querySelectorAll('.preset').forEach(b=>b.addEventListener('click',()=>{sample.value=b.dataset.sample;publish.value=b.dataset.publish;update();}));
+document.getElementById('print-report').addEventListener('click',()=>window.print());update();
+
+const routes = {flow:'tab-flow',actions:'tab-actions',savings:'tab-savings'};
+function loadRoute(){const tab=document.getElementById(routes[location.hash.slice(1)]);if(tab)selectTab(tab);}
+tabs.forEach(tab=>tab.addEventListener('click',()=>{history.replaceState(null,'','#'+tab.id.slice(4));}));
+window.addEventListener('hashchange',loadRoute);loadRoute();
+document.getElementById('share-site').addEventListener('click',async function(){
+  try{await navigator.clipboard.writeText(location.href);this.textContent='Link copied';setTimeout(()=>this.textContent='Copy link',2000);}
+  catch{window.prompt('Copy this link:',location.href);}
+});
+function markPreset(){document.querySelectorAll('.preset').forEach(b=>{const active=b.dataset.sample===sample.value&&b.dataset.publish===publish.value;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});}
+document.querySelectorAll('.preset').forEach(b=>b.addEventListener('click',markPreset));
+[sample,publish].forEach(s=>s.addEventListener('input',markPreset));markPreset();
+
+</script>
+</body>
+</html>
