@@ -4,7 +4,7 @@ Live site: https://simkessy.github.io/gpt-labeler-performance-review/
 
 Open index.html in any browser. No build step or external assets are required.
 
-Includes an executive summary with memory recommendations and sample lineage, current-workflow views, resource measurements, static savings estimates, and an overlaid proposed workflow. Estimated savings are unverified; delivery estimates and the pilot checklist are omitted.
+Includes an executive summary with memory recommendations and sample lineage, an expandable current process map, resource measurements, static savings estimates, and an overlaid proposed workflow. Estimated savings are unverified; delivery estimates and the pilot checklist are omitted.
 
 The original memory and worker-count data is preserved.
 
