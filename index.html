@@ -73,7 +73,7 @@ function renderProcessMap(focusKey) {
   const text = (label,x,y,size=18,color=colors.ink,weight=500,anchor='start') =>
     '<text x="'+x+'" y="'+y+'" font-family="'+font+'" font-size="'+size+'" font-weight="'+weight+'" fill="'+color+'" text-anchor="'+anchor+'">'+escape(label)+'</text>';
   const route = points => '<path d="M'+points.map(p=>p.join(',')).join(' L')+'" fill="none" stroke="'+colors.line+'" stroke-width="2" marker-end="url(#process-arrow)"/>';
-  function node({lines,value,body,key,x,y,width,height=144,branch,index}) {
+  function node({lines,value,note,body,key,x,y,width,height=144,branch,index}) {
     const label = lines.join(' ');
     const attrs = key
       ? 'role="button" tabindex="0" data-process-toggle="'+key+'" aria-expanded="'+processOpen[key]+'" aria-controls="map-branch-'+key+'" aria-label="'+escape(label+', '+value+'. '+(processOpen[key]?'Collapse':'Expand')+' substeps')+'"'
@@ -83,6 +83,7 @@ function renderProcessMap(focusKey) {
     const firstLine = y+(height===144?37:32);
     lines.forEach((line,i)=>result+=text(line,x+width/2,firstLine+i*25,20,colors.ink,600,'middle'));
     if(value) result += text(value,x+width/2,y+(height===144?96:85),18,colors.muted,500,'middle');
+    if(note) result += text(note,x+width/2,y+111,18,colors.muted,500,'middle');
     if(key) result += text((processOpen[key]?'− Hide':'+ Show')+' substeps',x+width/2,y+125,18,colors.accent,600,'middle');
     return result+'</g>';
   }
@@ -94,8 +95,8 @@ function renderProcessMap(focusKey) {
     {lines:['Output','available'],value:'Finish',body:VIEWS.full.nodes[6].body},
   ];
   const gateTop = 202;
-  const outputTop = processOpen.gate ? 418 : 202;
-  const bottom = processOpen.output ? outputTop+196 : processOpen.gate ? gateTop+196 : 190;
+  const outputTop = processOpen.gate ? 470 : 202;
+  const bottom = processOpen.output ? outputTop+196 : processOpen.gate ? gateTop+248 : 190;
   map.setAttribute('viewBox','0 0 1200 '+bottom);
   let markup = '<defs><marker id="process-arrow" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="'+colors.line+'"/></marker></defs>';
   for(let i=0;i<4;i++) markup += route([[24+i*236+210,96],[24+(i+1)*236-4,96]]);
@@ -104,21 +105,23 @@ function renderProcessMap(focusKey) {
     ? route([[836,170],[836,186],[1188,186],[1188,outputTop+18],[1179,outputTop+18]])
     : route([[836,170],[836,outputTop-4]]);
   main.forEach((n,i)=>markup+=node({...n,x:24+i*236,y:24,width:208}));
-  function branch(key,top,title,labels,indices,width,stride,showValues) {
+  function branch(key,top,title,labels,indices,width,stride,showValues,subtitle) {
     if(!processOpen[key]) return '<g id="map-branch-'+key+'" hidden></g>';
-    let result = '<g id="map-branch-'+key+'" role="group" aria-label="'+escape(title)+'"><rect x="24" y="'+top+'" width="1152" height="184" rx="10" fill="'+colors.surface+'" stroke="'+colors.line+'" stroke-width="1.5"/>';
+    let result = '<g id="map-branch-'+key+'" role="group" aria-label="'+escape(title)+'"><rect x="24" y="'+top+'" width="1152" height="'+(subtitle?236:184)+'" rx="10" fill="'+colors.surface+'" stroke="'+colors.line+'" stroke-width="1.5"/>';
     result += text(title,44,top+34,20,colors.ink,600);
-    for(let i=0;i<labels.length-1;i++) result += route([[44+i*stride+width+2,top+112],[44+(i+1)*stride-4,top+112]]);
+    if(subtitle) result += text(subtitle,44,top+62,18,colors.muted);
+    const rowTop=top+(subtitle?90:62);
+    for(let i=0;i<labels.length-1;i++) result += route([[44+i*stride+width+2,rowTop+50],[44+(i+1)*stride-4,rowTop+50]]);
     labels.forEach((lines,i)=>{
       const source = VIEWS[key].nodes[indices[i]];
-      result += node({lines,value:showValues&&source.value!=='Timing starts here'?source.value:'',body:source.body,x:44+i*stride,y:top+62,width,height:102,branch:key,index:indices[i]});
+      result += node({lines,value:key==='gate'&&i===3?'Human: 5 h 12 min':showValues&&source.value!=='Timing starts here'?source.value:'',note:key==='gate'&&i===3?'36 reviews · average':'',body:key==='gate'&&i===3?'Average from pending approval to human approval; excludes sampling.':source.body,x:44+i*stride,y:rowTop,width,height:subtitle?128:102,branch:key,index:indices[i]});
     });
     return result+'</g>';
   }
-  markup += branch('gate',gateTop,'Sampling and approval · separate 2026 study',[
+  markup += branch('gate',gateTop,'Sampling and approval · September 2026',[
     ['Prepare','records'],['Label a','sample'],['Estimate','cost'],['Approve','job'],['Continue','full job'],
-  ],[1,2,3,4,5],206,226,false);
-  markup += branch('output',outputTop,'Publication substeps · separate 432-job sample',[
+  ],[1,2,3,4,5],206,226,false,'Sampling to restart: 6 h 35 min average · 1,398 automatically resumed jobs');
+  markup += branch('output',outputTop,'Publication substeps · average waits across 432 jobs',[
     ['Detect','completion'],['Save','labels'],['Wait for','cleanup'],['Select','ready job'],['Reserve','& start'],['Write final','table'],['Mark as','published'],
   ],[0,1,2,3,4,5,6],144,162,true);
   map.innerHTML = markup;
