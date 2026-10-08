@@ -59,7 +59,7 @@ const VIEWS=JSON.parse(document.getElementById('workflow-data').textContent);
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const reportTabs=[...document.querySelectorAll('[data-report-tab]')];
-const routes={overview:'overview',evidence:'overview',study:'overview',timing:'timing',time:'timing',approval:'timing',resources:'resources',memory:'resources',work:'resources',plan:'plan',path:'plan',delivery:'plan'};
+const routes={overview:'overview',evidence:'overview',study:'overview',timing:'timing',time:'timing',approval:'overview',resources:'resources',memory:'resources',work:'resources',plan:'plan',path:'plan',delivery:'plan'};
 function chooseReport(key,update=true){if(!reportTabs.some(t=>t.dataset.reportTab===key))key='overview';reportTabs.forEach(t=>{const active=t.dataset.reportTab===key;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;$(t.getAttribute('aria-controls')).hidden=!active;});if(update)history.replaceState(null,'','#'+key);}
 function keyboardTabs(list,choose){list.forEach((tab,i)=>{tab.addEventListener('click',()=>choose(tab));tab.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%list.length;else if(e.key==='ArrowLeft')next=(i+list.length-1)%list.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=list.length-1;else return;e.preventDefault();choose(list[next]);list[next].focus();});});}
 keyboardTabs(reportTabs,t=>{chooseReport(t.dataset.reportTab);const bar=document.querySelector('.report-tabs');if(bar.scrollIntoView)bar.scrollIntoView({block:'start'});});
