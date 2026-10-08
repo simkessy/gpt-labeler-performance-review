@@ -1,13 +1,11 @@
-# GPT Labeler Performance Review
-
-A concise September 2026 performance briefing.
+# GPT Labeler performance review
 
 Live site: https://simkessy.github.io/gpt-labeler-performance-review/
 
-Open `index.html` in any browser. No build step or external dependencies are required.
+Open index.html in any browser. No build step or external assets are required.
 
-The overview summarizes the key findings and recommended priorities. Five tabs organize Overview, Timing & flow, Resources, Plan & savings, and Evidence. Detailed workflows, approval evidence, publication handoffs, and submission counts are expandable.
+Includes an executive summary, visible study data, current-workflow views, resource measurements, static savings estimates, and an overlaid proposed workflow. Estimated savings are unverified; delivery estimates and the pilot checklist are omitted.
 
-Interactive workflows, resource filters, the savings calculator, themes, keyboard navigation, historical section links, and print-to-PDF are included. Engineering delivery estimates have been removed. Observed timings are retained, and proposed savings are marked as assumptions.
+The original memory and worker-count data is preserved.
 
-Referenced source documents were not supplied.
+The workflow diagram source is included as workflow-overlay.py. Regenerate the standalone SVG with `uv run workflow-overlay.py --output workflow-overlay.svg`. The page embeds its own copy of the SVG.
