@@ -4,10 +4,6 @@ An interactive September 2026 performance report.
 
 Open `index.html` in a browser. No build step or external dependencies are required.
 
-Includes report tabs, keyboard navigation, a savings calculator, share link copying, and print-to-PDF. Referenced evidence files were not included and are marked accordingly.
+Includes interactive job workflows, memory comparisons and workload filters, current/proposed flow views, a savings calculator, light/dark themes, keyboard navigation, and print-to-PDF. Referenced evidence files were not included and are marked accordingly.
 
-To serve locally:
-
-```sh
-python3 -m http.server 8765 --bind 127.0.0.1
-```
+Live site: https://simkessy.github.io/gpt-labeler-performance-review/
